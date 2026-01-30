@@ -2,6 +2,9 @@ def check_password_strength(password):
     has_upper = False
     has_lower = False
     has_number = False
+    has_special = False
+
+    special_chars = "@!\"£$%^&*()-=_+{}~#][:;'?><,./\\€"
 
     for char in password:
         if char.isupper():
@@ -10,17 +13,21 @@ def check_password_strength(password):
             has_lower = True
         elif char.isdigit():
             has_number = True
+        elif char in special_chars:
+            has_special = True
 
-    if len(password) < 10:
-        return "Password must be at least 10 characters long."
+    if len(password) < 8:
+        return "Password must be at least 8 characters long."
     if " " in password:
         return "Password cannot contain spaces."
     if not has_upper:
-        return "Password must inlude an uppercase letter"
+        return "Password must include an uppercase letter"
     if not has_lower:
         return "Password must include a lowercase letter"
     if not has_number:
         return "Password must include a number"
+    if not has_special:
+        return "Password must include a special character"
 
     return "Password meets all requirements"
 
