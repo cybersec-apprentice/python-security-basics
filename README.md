@@ -11,8 +11,10 @@ A simple Python script that evaluates password strength based on basic security 
 - Minimum 10 characters
 - At least one uppercase letter
 - At least one lowercase letter
+- At least one special character
 - At least one number
 - No spaces allowed
+- Allows multiple password inputs in a loop until the user types 'quit'
 ## How to Run
 1. Clone this repository: https://github.com/cybersec-apprentice/python-security-basics.git
 2. Navigate to the project folder: cd python-security-basics
@@ -20,8 +22,6 @@ A simple Python script that evaluates password strength based on basic security 
 4. Enter a password when prompted.
 ## Enhancements
 Future improvements could include:
-- Add a special character requirement (e.g., !@#$%^&*)
-- Allow multiple password inputs in a loop until the user types 'quit'
 - Color-coded output for strong vs weak passwords
 - Provide suggestions for improving passwords rather than only indicating failure
 - Log password checks to a file for testing or analysis
