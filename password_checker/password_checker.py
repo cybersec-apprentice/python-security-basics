@@ -33,9 +33,12 @@ def check_password_strength(password):
 
 
 def main():
-    password = input("Enter Password: ")
-    result = check_password_strength(password)
-    print(result)
+    while True:
+        password = input("Enter Password (or type \"quit\" to exit): ")
+        if password.lower() == "quit":
+            break
+        result = check_password_strength(password)
+        print(result)
 
 
 if __name__ == "__main__":
